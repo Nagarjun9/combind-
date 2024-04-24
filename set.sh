@@ -1,6 +1,8 @@
 #!/bin/bash 
 set -e
 
+trap  'linenumber ${LINENO} "$BASH_COMMAND"' ERR 
+
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
