@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source ./common-shell.sh 
+
 check_root
 
 echo "please enter the password"
