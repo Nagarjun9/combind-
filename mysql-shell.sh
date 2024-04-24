@@ -4,7 +4,7 @@ source ./common-shell.sh
 
 check_root
 
-echo "please enter the password"
+echo -e "$G please enter the password $N"
 read -s mysql_root_password
 
 dnf install mysql-server -y &>>$LOGFILE
@@ -24,6 +24,6 @@ then
     mysql_secure_installation --set-root-pass ${mysql_root_password}
     VALIDATION $? "mysql root password setup"
 else 
-   echo " mysql root password already set...SKIPPED"
+   echo -e "$B mysql root password already set...SKIPPED $N"
 fi 
 
