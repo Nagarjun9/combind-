@@ -8,6 +8,7 @@ LOGFILE=/tmp/$SCRITP_NAME-$TIMESTAME.log
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
+B="\e[34m"
 N="\e[0m"
 
 VALIDATION(){
@@ -28,3 +29,8 @@ check_root(){
           echo -e " $G you are a super user $N"
        fi 
 }
+
+
+
+
+
