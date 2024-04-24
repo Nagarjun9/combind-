@@ -22,6 +22,7 @@ mysql -h db.daws78s.cloud -uroot -p${mysql_root_password} -e 'show databases;' &
 if [ $? -ne 0 ]
 then 
     mysql_secure_installation --set-root-pass ${mysql_root_password}
+    VALIDATION $? "mysql root password setup"
 else 
    echo " mysql root password already set...SKIPPED"
 fi 
