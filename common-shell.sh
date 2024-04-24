@@ -16,6 +16,7 @@ VALIDATION(){
        echo -e "$Y $2...failed $N"
     else 
        echo -e "$B $2...success $N"
+    fi 
 }
 
 
