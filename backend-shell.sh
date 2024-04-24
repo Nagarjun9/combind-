@@ -25,11 +25,12 @@ else
 fi 
 
 mkdir -p /app
-rm *
+
 
 curl -o /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip &>>$LOGFILE
 
 cd /app
+rm *
 
 unzip /tmp/backend.zip &>>$LOGFILE
 VALIDATION $? "unzip backend"
