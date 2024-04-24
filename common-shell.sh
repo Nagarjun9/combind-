@@ -15,6 +15,7 @@ VALIDATION(){
     if [ $1 -ne 0 ]
     then 
        echo -e "$Y $2...failed $N"
+       exit 1
     else 
        echo -e "$Y $2...success $N"
     fi 
@@ -25,6 +26,7 @@ check_root(){
        if [ $USERID -ne 0 ]
        then 
           echo -e " $R you are not a superuser please use root access $N"
+          exit 1
        else 
           echo -e " $G you are a super user $N"
        fi 
